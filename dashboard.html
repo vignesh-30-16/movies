@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Controls: Search Bar & Add Movie Button -->
+    <div class="controls">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search movies...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <button id="add-movie">Add Movie</button>
+        <p id="name">Hii welcome</p>
+    </div>
+    
+
+    <!-- Movie Form (Initially Hidden) -->
+    <div id="movie-form-container" class="hidden">
+        <form id="movie-form">
+            <h2>Add a New Movie</h2><h2 id="close">x</h2>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="releasedate">Release Date:</label>
+            <input type="date" id="releasedate" required>
+
+            <label for="adult">Adult:</label>
+            <select id="adult" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label>Genre</label>
+            
+            <div id="genre-container">
+                <!-- <label for="">action</label> -->
+                <label><input type="checkbox" name="genre" value="28"> Action</label>
+                <label><input type="checkbox" name="genre" value="12"> Adventure</label>
+                <label><input type="checkbox" name="genre" value="35"> Comedy</label>
+                <label><input type="checkbox" name="genre" value="80"> Crime</label>
+                <label><input type="checkbox" name="genre" value="18"> Drama</label>
+                <label><input type="checkbox" name="genre" value="10751"> Family</label>
+                <label><input type="checkbox" name="genre" value="14"> Fantasy</label>
+                <label><input type="checkbox" name="genre" value="36"> History</label>
+                <label><input type="checkbox" name="genre" value="10749"> Romance</label>
+                <label><input type="checkbox" name="genre" value="53"> Thriller</label>
+            </div>
+
+            <label for="language">Language:</label>
+            <input type="text" id="language" required>
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" step="0.1" min="0" max="10" required>
+
+            <label for="img">Image URL:</label>
+            <input type="url" id="img" placeholder="Paste image link here" required>
+
+            <button type="submit" id="submit">Submit Movie</button>
+        </form>
+    </div>
+
+    <!-- Movie Container -->
+    <div id="container"></div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

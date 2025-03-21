@@ -1,0 +1,294 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a41dda, #9780aa);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#search {
+    border: none;
+    padding: 8px;
+    width: 200px;
+    outline: none;
+}
+
+#search-btn {
+    background: #8B5DFF;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #563A9C;
+}
+
+/* Add Movie Button */
+#add-movie {
+    background: #8B5DFF;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-movie:hover {
+    background: #563A9C;
+}
+
+/* Greeting Text */
+#name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Movie Form */
+#movie-form-container {
+    display: none;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#movie-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#movie-form label {
+    font-weight: bold;
+}
+
+#movie-form input, 
+#movie-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#submit {
+    background: #8B5DFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background: #563A9C;
+}
+
+/* Movie Cards */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.movie-mname {
+    background: rgba(255, 255, 255, 0.6);
+    /* height: 20vh; */
+    /* width: 50%; */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.movie-mname:hover {
+    transform: scale(1.04);
+}
+
+.movie-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.movie-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.movie-release, .movie-adult, .movie-genres, .movie-language, .movie-rating {
+    font-size: 14px;
+    margin-top: 5px;
+}
+#close{
+    transition: all 2;
+}
+/* Genre Container */
+#genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between checkboxes */
+    margin-top: 10px;
+}
+
+/* Individual Genre Labels */
+#genre-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+#close{
+    position: relative;
+    bottom: 48px;
+    left: 140px;
+    font-size: xx-large;
+    cursor: pointer;
+}
+#close:hover{
+color: #563A9C;
+}
+/* Checkbox Styling */
+#genre-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #007bff; /* Blue checkbox */
+}
+
+/* Hover Effect */
+#genre-container label:hover {
+    background-color: #e2e6ea;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    #genre-container {
+        flex-direction: column;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #search {
+        width: 150px;
+    }
+
+    #container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+/* Search Input Field */
+#search {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    /* height: 20vh; */
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}
+
+/* Search Button */
+#search-btn {
+    background: #8B5DFF;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #563A9C;
+}
+
+/* Search Button Icon */
+#search-btn i {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+    }
+
+    #search {
+        font-size: 14px;
+    }
+
+    #search-btn {
+        padding: 8px 12px;
+    }
+}
